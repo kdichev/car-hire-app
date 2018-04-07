@@ -21,7 +21,7 @@ class App extends Component<{}> {
       <div className="App">
         <BodyContainer>
           <p className="App-intro">
-            To get started, type in your <code>location</code> and search.
+            To get started, type in your location and search.
           </p>
           <Container>
             <TextField
