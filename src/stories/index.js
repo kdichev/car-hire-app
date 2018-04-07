@@ -43,7 +43,6 @@ storiesOf("TextField", module)
         id="password"
         placeholder="Password"
         type="password"
-        value=""
         onChange={input => {
           console.log(input);
           action("changed");
@@ -55,7 +54,6 @@ storiesOf("TextField", module)
         id="number"
         placeholder="Post Code"
         type="number"
-        value=""
         onChange={input => {
           console.log(input);
           action("changed");
@@ -67,7 +65,6 @@ storiesOf("TextField", module)
         id="disabled"
         type="disabled"
         placeholder="Disabled"
-        value=""
         disabled
         onChange={input => {
           console.log(input);
@@ -82,7 +79,6 @@ storiesOf("TextField", module)
         id="inlineTextField"
         type="text"
         placeholder="Inline TextField"
-        value=""
         inline
         onChange={input => {
           console.log(input);
