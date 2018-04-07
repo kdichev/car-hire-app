@@ -1,11 +1,7 @@
 // @flow
 import React, { Component } from "react";
 import styled from "styled-components";
-import type {
-  TextFieldProps,
-  TextFieldState,
-  getTextFieldData
-} from "./../types";
+import type { TextFieldProps, getTextFieldData } from "./../types";
 
 const Input = styled.input`
   border: none;
