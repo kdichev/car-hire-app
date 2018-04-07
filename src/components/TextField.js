@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from "react";
 import styled from "styled-components";
 
@@ -11,15 +12,25 @@ const Input = styled.input`
   width: calc(100% - 2 * 13px);
   ${props => props.disabled && `background: lightgray`};
   ${props => props.marginRight && `margin-right: ${props.marginRight}`};
+  ${props => props.inline && `width: auto`};
 `;
 
-export class TextField extends Component {
+type State = {
+  value: string
+};
+
+type Props = {
+  onChange: (data: { id: string, value: string }) => void,
+  id: string
+};
+
+type InputData = (e: { target: { name: string, value: string } }) => void;
+
+export class TextField extends Component<Props, State> {
   state = { value: "" };
-  getInputData = ({ target: { name, value } }) => {
+  getInputData: InputData = ({ target: { name, value } }) => {
     const { onChange } = this.props;
-    this.setState(prevState => ({
-      value: value
-    }));
+    this.setState(prevState => ({ value: value }));
     onChange({ id: name, value: value });
   };
   render() {

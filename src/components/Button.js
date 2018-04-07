@@ -1,3 +1,4 @@
+// @flow
 import React from "react";
 import styled from "styled-components";
 
@@ -19,6 +20,19 @@ const StyledButton = styled.button`
   ${props => !props.inline && `width: 100%`};
 `;
 
-export const Button = props => {
-  return <StyledButton {...props}>{props.children}</StyledButton>;
+type Props = {
+  children: {},
+  inline: boolean,
+  onClick: () => void
+};
+
+type ButtonType = (props: Props) => any;
+
+export const Button: ButtonType = ({ children, ...rest }) => {
+  Button.defaultProps = {
+    children: "Button",
+    inline: false,
+    onClick: () => null
+  };
+  return <StyledButton {...rest}>{children}</StyledButton>;
 };
