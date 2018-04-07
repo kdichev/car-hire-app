@@ -10,6 +10,7 @@ const Input = styled.input`
   box-shadow: 0 1px 3px rgba(50, 50, 93, 0.15), 0 1px 0 rgba(0, 0, 0, 0.02);
   width: calc(100% - 2 * 13px);
   ${props => props.disabled && `background: lightgray`};
+  ${props => props.marginRight && `margin-right: ${props.marginRight}`};
 `;
 
 export class TextField extends Component {
