@@ -13,12 +13,16 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "storybook": "start-storybook -p 3001 -s public",
+    "build-storybook": "build-storybook -s public -o build/storybook",
+    "flow": "flow"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.0",
     "@storybook/addon-links": "^3.4.0",
-    "@storybook/react": "^3.4.0"
+    "@storybook/react": "^3.4.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "flow-bin": "^0.69.0"
   }
 }
